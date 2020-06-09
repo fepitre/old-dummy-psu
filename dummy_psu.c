@@ -235,7 +235,12 @@ static int dummy_set_psp(struct power_supply *psy,
 	} else {
 		psp_val[psp].intval = val->intval;
 	}
-	signal_power_supply_changed(dummy_power_supplies[DUMMY_BATTERY]);
+
+	if (!strcmp(psy->desc->name, ac_name)) {
+		signal_power_supply_changed(dummy_power_supplies[DUMMY_AC]);
+	} else if (!strcmp(psy->desc->name, battery_name)) {
+		signal_power_supply_changed(dummy_power_supplies[DUMMY_BATTERY]);
+	}
 	return 0;
 }
 
