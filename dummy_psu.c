@@ -329,6 +329,6 @@ MODULE_PARM_DESC(battery_serial_number,
 		 "battery serial number (default: UTS_RELEASE)");
 
 // MODULE INFO
-MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Dummy power supply driver");
 MODULE_AUTHOR("Frédéric Pierret (fepitre) <frederic.pierret@qubes-os.org>");
+MODULE_DESCRIPTION("Dummy power supply driver");
+MODULE_LICENSE("GPL");
